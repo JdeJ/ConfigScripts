@@ -3,7 +3,7 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode)
 
-echo -e "\n\n==>Setting VSCode"
+echo -e "\n\n==> Setting VSCode"
 
 echo -e "\n> Installing VSCode"
 # brew cask install visual-studio-code
