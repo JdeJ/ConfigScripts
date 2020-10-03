@@ -3,12 +3,12 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode)
 
-echo "Setting VSCode\n\n"
+echo -e "\n\nSetting VSCode"
 
-echo "\nInstalling vscode"
+echo -e "\nInstalling vscode"
 # brew cask install visual-studio-code
 
-echo "\nAdding vscode-extensions"
+echo -e "\nAdding vscode-extensions"
 # code --force --install-extension ChakrounAnas.turbo-console-log
 # code --force --install-extension wix.vscode-import-cost
 # code --force --install-extension kamikillerto.vscode-colorize
@@ -40,4 +40,4 @@ echo "\nAdding vscode-extensions"
 # code --force --install-extension waderyan.gitblame
 code --force --install-extension firefox-devtools.vscode-firefox-debug
 
-echo "\nSetting basic user config options"
+echo -e "\nSetting basic user config options"
