@@ -5,10 +5,10 @@
 
 echo -e "\n\nSetting VSCode"
 
-echo -e "\nInstalling vscode"
+echo -e "\nInstalling VSCode"
 # brew cask install visual-studio-code
 
-echo -e "\nAdding vscode-extensions"
+echo -e "\nAdding VSCode-extensions"
 # code --force --install-extension ChakrounAnas.turbo-console-log
 # code --force --install-extension wix.vscode-import-cost
 # code --force --install-extension kamikillerto.vscode-colorize
