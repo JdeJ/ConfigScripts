@@ -1,0 +1,44 @@
+[core]
+    excludesfile = /Users/JdeJ/.gitignore_global
+[user]
+	name = Jorge de Juana
+	email = jorge.dejuana@nicepeopleatwork.com
+
+[init]
+	defaultBranch = main
+
+[push]
+  default = current
+
+[alias]
+  a = add -A
+  cl = clone
+  co = checkout
+  cb = checkout -b
+  cm = commit -m
+  ca = commit -a --amend --no-edit
+  f = fetch -all
+  i = init
+  rh = reset --hard HEAD
+  rs = reset --soft HEAD
+  cdiff = "!git diff $1 $1^"
+
+[interactive]
+    diffFilter = delta --color-only
+
+[color]
+	ui = true
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
