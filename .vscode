@@ -28,7 +28,6 @@ echo -e "\n> Adding VSCode-extensions"
 # code --force --install-extension MS-vsliveshare.vsliveshare
 # code --force --install-extension huizhou.githd
 # code --force --install-extension dsznajder.es7-react-js-snippets
-# code --force --install-extension atlassian.atlascode
 # code --force --install-extension christian-kohler.path-intellisense
 # code --force --install-extension dbaeumer.vscode-eslint
 # code --force --install-extension donjayamanne.githistory
@@ -36,8 +35,11 @@ echo -e "\n> Adding VSCode-extensions"
 # code --force --install-extension mgmcdermott.vscode-language-babel
 # code --force --install-extension msjsdiag.debugger-for-chrome
 # code --force --install-extension redhat.vscode-yaml
-# code --force --install-extension rvest.vs-code-prettier-eslint
 # code --force --install-extension waderyan.gitblame
-code --force --install-extension firefox-devtools.vscode-firefox-debug
+# code --force --install-extension techer.open-in-browser
+# code --force --install-extension ms-vscode.vscode-typescript-tslint-plugin
+# code --force --install-extension CoenraadS.bracket-pair-colorizer-2
+# code --force --install-extension firefox-devtools.vscode-firefox-debug
 
 echo -e "\n> Setting basic user config options"
+# curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode_settings > "$HOME/Library/Application\ Support/Code/User/settings.json"
