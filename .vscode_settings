@@ -46,7 +46,6 @@
     // Intellicode Settings
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // ESLint Settings
-    "eslint.enable": true,
     "eslint.packageManager": "yarn",
     "eslint.validate": [
         "javascript",
