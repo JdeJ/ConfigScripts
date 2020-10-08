@@ -1,0 +1,27 @@
+#! /bin/bash
+
+# Homebrew, stuff and a lot of apps
+# Run without downloading:
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode)
+
+echo -e "\n\n==> Setting homebrew"
+
+echo -e "\n> Installing homebrew"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew doctor
+
+echo -e "\n> Installing brew stuff"
+# hub: a github-specific version of git
+# watchman: watch files and take action when they change
+# tree: really handy for listing out directories in text
+# bat: A cat(1) clone with syntax highlighting and Git integration.
+brew install git hub watchman tree bat
+
+echo -e "\n> Installing apps with brew cask"
+brew cask install --force alfred android-studio chromedriver dash discord dropbox \
+firefox firefox-developer-edition gitkraken google-drive-file-stream \
+google-chrome google-chrome-dev handbrake iterm2 itsycal \
+marshallofsound-google-play-music-player mounty node notion nvm obs phpstorm postman \
+qlcolorcode qlmarkdown qlstephen qlvideo qmoji quicklook-json rectangle \
+slack spotify sublime-text suspicious-package skype teamviewer the-unarchiver transmission \
+virtualbox vlc whatsapp webpquicklook webstorm wifi-password workflowy yarn zoomus
