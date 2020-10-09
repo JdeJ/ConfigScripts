@@ -2,7 +2,7 @@
 
 # Setup git config, stuff and a lot of customizing
 # Run without downloading:
-# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig)
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitsetup)
 
 echo -e "\n\n==> Setting Git"
 
