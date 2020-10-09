@@ -20,5 +20,5 @@ do
     eval "$(ssh-agent -s)"
     echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" >  ~/.ssh/config
     SSH_ASKPASS=$pass ssh-add -K ~/.ssh/${rsas[$i]}_rsa
-    echo "run 'pbcopy < ~/.ssh/${rsas[$i]}.pub' and paste that into GitHub"
+    echo "run 'pbcopy < ~/.ssh/${rsas[$i]}_rsa.pub' and paste that into GitHub"
 done
