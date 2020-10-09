@@ -7,16 +7,18 @@
 mkdir -p ~/.ssh
 touch ~/.ssh/config
 
-echo -e "\n\n==> Generating an RSA token for JdeJ\n"
-ssh-keygen -t rsa -b 4096 -C "jorgedjuana@gmail.com" -f ~/.ssh/JdeJ_rsa
-eval "$(ssh-agent -s)"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/JdeJ_rsa" | tee ~/.ssh/config
-ssh-add -K ~/.ssh/id_rsa
-echo "run 'pbcopy < ~/.ssh/JdeJ.pub' and paste that into GitHub"
+echo -e "\n\n==> Generating RSA tokens\n"
+read -p 'Username(s): ' -a users
+read -p 'rsa(s): ' -a rsas
+read -sp 'Passphrase: ' pass
 
-echo -e "\n\n==> Generating an RSA token for Nice\n"
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/nice_rsa
-eval "$(ssh-agent -s)"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/nice_rsa" | tee ~/.ssh/config
-ssh-add -K ~/.ssh/id_rsa
-echo "run 'pbcopy < ~/.ssh/nice.pub' and paste that into GitHub"
+for (( i=0; i<=$(( ${#users[*]} -1 )); i++ ))
+do 
+    echo -e "\n\n==> Generating an RSA token for ${rsas[$i]}\n"
+    ssh-keygen -t rsa -b 4096 -C ${users[$i]} -P $pass -f ~/.ssh/${rsas[$i]}_rsa
+
+    eval "$(ssh-agent -s)"
+    echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" | tee ~/.ssh/config
+    SSH_ASKPASS=$pass ssh-add -K ~/.ssh/${rsas[$i]}_rsa
+    echo "run 'pbcopy < ~/.ssh/${rsas[$i]}.pub' and paste that into GitHub"
+done
