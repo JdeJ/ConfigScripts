@@ -1,8 +1,18 @@
 [core]
     excludesfile = /Users/JdeJ/.gitignore_global
+
 [user]
-	name = Jorge de Juana
-	email = jorge.dejuana@nicepeopleatwork.com
+    name = Jorge de Juana
+    email = jorgedjuana@gmail.com
+    
+[includeIf "gitdir:~/code/nice/"]
+    path = ~/code/.gitconfig-nice
+    
+[includeIf "gitdir:~/code/vts/"]
+    path = ~/code/.gitconfig-vts
+
+[includeIf "gitdir:~/code/personal/"]
+    path = ~/code/.gitconfig-personal
 
 [init]
 	defaultBranch = main

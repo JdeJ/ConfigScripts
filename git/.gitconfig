@@ -1,54 +1,16 @@
-[core]
-    excludesfile = /Users/JdeJ/.gitignore_global
+#! /bin/bash
 
-[user]
-    name = Jorge de Juana
-    email = jorgedjuana@gmail.com
-    
-[includeIf "gitdir:~/code/nice/"]
-    path = ~/code/.gitconfig-nice
-    
-[includeIf "gitdir:~/code/vts/"]
-    path = ~/code/.gitconfig-vts
+# Setup git config, stuff and a lot of apps
+# Run without downloading:
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig)
 
-[includeIf "gitdir:~/code/personal/"]
-    path = ~/code/.gitconfig-personal
+echo -e "\n\n==> Setting Git"
 
-[init]
-	defaultBranch = main
+echo -e "\n> Creating global .gitconfig"
+curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig-global --output tiroriro --silent
 
-[push]
-  default = current
+echo -e "\n> Creating global .gitignore"
 
-[alias]
-  a = add -A
-  cl = clone
-  co = checkout
-  cb = checkout -b
-  cm = commit -m
-  ca = commit -a --amend --no-edit
-  f = fetch -all
-  i = init
-  rh = reset --hard HEAD
-  rs = reset --soft HEAD
-  cdiff = "!git diff $1 $1^"
+echo -e "\n> Adding git profiles"
 
-[interactive]
-    diffFilter = delta --color-only
-
-[color]
-	ui = true
-
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+echo -e "\n> Generating git ssh keys"
