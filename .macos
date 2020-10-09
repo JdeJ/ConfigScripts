@@ -23,7 +23,7 @@ echo -e "\n\n/*** Hello $(whoami)! Let's get you set up. ***/"
 
 # Code folder
 echo -e "\n\n/*** Creating code folder tree ***/"
-mkdir -pv {"${HOME}/Code","${HOME}/Code/projects","${HOME}/Code/nice","${HOME}/Code/vts","${HOME}/Code/tests"}
+mkdir -pv {"${HOME}/code","${HOME}/code/personal","${HOME}/code/nice","${HOME}/code/vts","${HOME}/code/tests", ,"${HOME}/code/projects"}
 
 # Homebrew
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrew)
