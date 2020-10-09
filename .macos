@@ -25,19 +25,19 @@ echo -e "\n\n/*** Hello $(whoami)! Let's get you set up. ***/"
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitsetup)
 
 # Homebrew
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrew)
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrewsetup)
 
 # Oh My Zsh
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.ohmyzsh)
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshsetup)
+
+# VSCode
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/.vscodesetup)
 
 echo -e "\n\n/*** Installing a few global npm packages ***/"
 # serve: Static file serving and directory listing
 # fkill-cli: Fabulously kill processes.
 # npm-quick-run: Quickly run NPM script by prefix without typing the full name
 npm install --global serve fkill-cli npm-quick-run
-
-# VSCode
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/.vscode)
 
 echo -e "\n\n/*** Making system modifications: ***/"
 ###############################################################################

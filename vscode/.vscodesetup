@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Run without downloading:
-# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode)
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/.vscodesetup)
 
 echo -e "\n\n==> Setting VSCode"
 
@@ -42,4 +42,4 @@ code --force --install-extension CoenraadS.bracket-pair-colorizer-2
 code --force --install-extension firefox-devtools.vscode-firefox-debug
 
 echo -e "\n> Setting basic user config options"
-curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode_settings > "$HOME/Library/Application Support/Code/User/settings.json"
+curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/settings.json > "$HOME/Library/Application Support/Code/User/settings.json"

@@ -2,7 +2,7 @@
 
 # Oh My Zsh and powerlevel10k
 # Run without downloading:
-# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.ohmyzsh)
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshsetup)
 
 echo -e "\n\n==> Setting Oh My Zsh"
 
@@ -14,4 +14,7 @@ brew install romkatv/powerlevel10k/powerlevel10k
 echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 echo -e "\n> Configuring powerlevel10k"
-curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.p10k.zsh >>! ~/.p10k.zsh
+curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.p10k.zsh >>! ~/.p10k.zsh
+
+echo -e "\n> Customizing Oh My Zsh"
+curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zsh-config >> ~/.zshrc
