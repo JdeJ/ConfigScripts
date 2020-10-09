@@ -22,7 +22,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo -e "\n\n/*** Hello $(whoami)! Let's get you set up. ***/"
 
 # Git
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig)
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitsetup)
 
 # Homebrew
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrew)
