@@ -1,3 +1,6 @@
+[core]
+  excludesfile = .gitignore
+
 [user]
     name = Jorge de Juana
     email = jorgedjuana@gmail.com
