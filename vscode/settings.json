@@ -20,6 +20,8 @@
     "editor.cursorSmoothCaretAnimation": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.multiCursorPaste": "full",
+    "editor.scrollBeyondLastLine": false,
+    "diffEditor.ignoreTrimWhitespace": false,
     // Appearance
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
@@ -49,9 +51,15 @@
     "eslint.packageManager": "yarn",
     "eslint.validate": [
         "javascript",
-        "javascriptreact",
+        "javascriptreact"
     ],
-    /* Bracket Pair Colorizer Settings */
+    "eslint.alwaysShowStatus": true,
+    "eslint.codeAction.showDocumentation": {
+        "enable": true
+    },
+    "eslint.format.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    // Bracket Pair Colorizer Settings
     "bracket-pair-colorizer-2.showBracketsInGutter": true,
     "bracket-pair-colorizer-2.showBracketsInRuler": true,
     "bracket-pair-colorizer-2.colors": [
@@ -69,6 +77,11 @@
     "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
     "bracket-pair-colorizer-2.forceIterationColorCycle": false,
     "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
+    // javascript
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.updateImportsOnFileMove.enabled": "never",
     // Git Lens Settings
     "gitlens.defaultDateStyle": "absolute",
     "gitlens.statusBar.enabled": true
