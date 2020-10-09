@@ -4,11 +4,19 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.gitsetup)
 
-echo -e "\n\n==> Generating an RSA token for GitHub\n"
 mkdir -p ~/.ssh
 touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "jorgedjuana@gmail.com" -P "Pititillas.10" -f ~/.ssh/JdeJBook_rsa
+
+echo -e "\n\n==> Generating an RSA token for JdeJ\n"
+ssh-keygen -t rsa -b 4096 -C "jorgedjuana@gmail.com" -f ~/.ssh/JdeJ_rsa
 eval "$(ssh-agent -s)"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/JdeJBook_rsa" | tee ~/.ssh/config
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/JdeJ_rsa" | tee ~/.ssh/config
 ssh-add -K ~/.ssh/id_rsa
-echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
+echo "run 'pbcopy < ~/.ssh/JdeJ.pub' and paste that into GitHub"
+
+echo -e "\n\n==> Generating an RSA token for Nice\n"
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/nice_rsa
+eval "$(ssh-agent -s)"
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/nice_rsa" | tee ~/.ssh/config
+ssh-add -K ~/.ssh/id_rsa
+echo "run 'pbcopy < ~/.ssh/nice.pub' and paste that into GitHub"
