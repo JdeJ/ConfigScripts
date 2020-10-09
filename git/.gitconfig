@@ -13,9 +13,7 @@ echo -e "\n> Creating global .gitignore"
 curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitignore-global --output "$HOME/.gitignore" --silent
 
 echo -e "\n> Adding git profiles"
-curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitprofile-personal --output "$HOME/.gitprofile-personal" --silent
-curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitprofile-nice --output "$HOME/.gitprofile-nice" --silent
-curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitprofile-vts --output "$HOME/.gitprofile-vts" --silent
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitprofiles)
 
 echo -e "\n> Generating git ssh keys"
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitssh)

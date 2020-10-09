@@ -21,15 +21,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo -e "\n\n/*** Hello $(whoami)! Let's get you set up. ***/"
 
-# Code folder
-echo -e "\n\n/*** Creating code folder tree ***/"
-mkdir -pv {"${HOME}/code","${HOME}/code/personal","${HOME}/code/nice","${HOME}/code/vts","${HOME}/code/tests", ,"${HOME}/code/projects"}
+# Git
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig)
 
 # Homebrew
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrew)
 
 # Oh My Zsh
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.ohmyzsh)
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.ohmyzsh)
 
 echo -e "\n\n/*** Installing a few global npm packages ***/"
 # serve: Static file serving and directory listing
@@ -38,7 +37,7 @@ echo -e "\n\n/*** Installing a few global npm packages ***/"
 npm install --global serve fkill-cli npm-quick-run
 
 # VSCode
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.vscode)
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/.vscode)
 
 echo -e "\n\n/*** Making system modifications: ***/"
 ###############################################################################

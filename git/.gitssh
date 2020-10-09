@@ -14,11 +14,11 @@ read -sp 'Passphrase: ' pass
 
 for (( i=0; i<=$(( ${#users[*]} -1 )); i++ ))
 do 
-    echo -e "\n\n==> Generating an RSA token for ${rsas[$i]}\n"
+    echo -e "> Generating an RSA token for ${rsas[$i]}"
     ssh-keygen -t rsa -b 4096 -C ${users[$i]} -P $pass -f ~/.ssh/${rsas[$i]}_rsa
 
     eval "$(ssh-agent -s)"
-    echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" | tee ~/.ssh/config
+    echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" | tee ~/.ssh/config
     SSH_ASKPASS=$pass ssh-add -K ~/.ssh/${rsas[$i]}_rsa
     echo "run 'pbcopy < ~/.ssh/${rsas[$i]}.pub' and paste that into GitHub"
 done
