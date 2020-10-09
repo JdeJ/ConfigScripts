@@ -5,18 +5,18 @@
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitprofiles)
 
 echo -e "\n\n==> Generating git profiles\n"
-read -p 'Profile(s): ' -a profiles
-read -p 'Name(s): ' -a names
-read -p 'Email(s): ' -a mails
+read -p 'Profile(s) name(s) separed by space: ' -a profiles
+read -p 'Name(s) for .gitconfig separed by space: ' -a names
+read -p 'Email(s) for .gitconfig separed by space: ' -a mails
 
 # for f in "${profiles[@]}"
 for (( i=0; i<=$(( ${#profiles[*]} -1 )); i++ ))
 do 
-    echo -e "> Creating .gitprofile-${profiles[$i]}..."
+    echo -e "> Creating .gitprofile-${profiles[$i]}"
 
     echo -e "[user]\n name = ${names[$i]}\n email = ${mails[$i]}" > "$HOME/.gitprofile-${profiles[$i]}"
 
-    echo -e "\n[includeIf \"gitdir:~/code/${profiles[$i]}/\"]\n path = .gitprofile-${profiles[$i]}" >> "$HOME/.gitconfig2"
+    echo -e "\n[includeIf \"gitdir:~/code/${profiles[$i]}/\"]\n path = .gitprofile-${profiles[$i]}" >> "$HOME/.gitconfig"
 
     mkdir -pv "${HOME}/code/${profiles[$i]}"
 done

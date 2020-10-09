@@ -8,9 +8,9 @@ mkdir -p ~/.ssh
 touch ~/.ssh/config
 
 echo -e "\n\n==> Generating RSA tokens\n"
-read -p 'Username(s): ' -a users
-read -p 'rsa(s): ' -a rsas
-read -sp 'Passphrase: ' pass
+read -p 'User(s) email separed by space: ' -a users
+read -p 'rsa(s) file name separed by space: ' -a rsas
+read -sp 'Common passphrase for rsa(s): ' pass
 
 for (( i=0; i<=$(( ${#users[*]} -1 )); i++ ))
 do 
