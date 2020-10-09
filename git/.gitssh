@@ -2,7 +2,7 @@
 
 # Create github ssh keys
 # Run without downloading:
-# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.gitsetup)
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitssh)
 
 mkdir -p ~/.ssh
 touch ~/.ssh/config
