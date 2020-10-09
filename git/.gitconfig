@@ -7,3 +7,6 @@
     
 [includeIf "gitdir:~/code/vts/"]
     path = ~/code/.gitconfig-vts
+
+[includeIf "gitdir:~/code/personal/"]
+    path = ~/code/.gitconfig-personal
