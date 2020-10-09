@@ -1,0 +1,9 @@
+[user]
+    name = Jorge de Juana
+    email = jorgedjuana@gmail.com
+    
+[includeIf "gitdir:~/code/nice/"]
+    path = ~/code/.gitconfig-nice
+    
+[includeIf "gitdir:~/code/vts/"]
+    path = ~/code/.gitconfig-vts
