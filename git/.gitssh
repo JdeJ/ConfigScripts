@@ -4,11 +4,11 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.gitsetup)
 
-echo "\n\n==> Generating an RSA token for GitHub"
+echo -e "\n\n==> Generating an RSA token for GitHub\n"
 mkdir -p ~/.ssh
 touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "jorgedjuana@gmail.com" -P "Pititillas.10" -f '$HOME/.ssh/JdeJBook_rsa'
+ssh-keygen -t rsa -b 4096 -C "jorgedjuana@gmail.com" -P "Pititillas.10" -f '~/.ssh/JdeJBook_rsa'
 eval "$(ssh-agent -s)"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/JdeJBook_rsa" | tee ~/.ssh/config
 ssh-add -K ~/.ssh/id_rsa
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
