@@ -16,7 +16,7 @@ do
 
     echo -e "[user]\n name = ${names[$i]}\n email = ${mails[$i]}" > "$HOME/.gitprofile-${profiles[$i]}"
 
-    echo -e "\n[includeIf \"gitdir:~/code/${profiles[$i]}/\"]\n path = .gitprofile-${profiles[$i]}" >> "$HOME/.gitconfig"
+    echo -e "\n[includeIf \"gitdir:~/dev/${profiles[$i]}/\"]\n path = .gitprofile-${profiles[$i]}" >> "$HOME/.gitconfig"
 
-    mkdir -pv "${HOME}/code/${profiles[$i]}"
+    mkdir -pv "${HOME}/dev/${profiles[$i]}"
 done
