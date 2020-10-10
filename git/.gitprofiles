@@ -19,4 +19,7 @@ do
     echo -e "\n[includeIf \"gitdir:~/dev/${profiles[$i]}/\"]\n    path = .gitprofile-${profiles[$i]}" >> "$HOME/.gitconfig"
 
     mkdir -pv "${HOME}/dev/${profiles[$i]}"
+    
+    echo -e '\nalias ${profiles[$i]}="cd $HOME/dev/${profiles[$i]} && code --extensions-dir $HOME/dev/jdej/vscode-profiles/${profiles[$i]}/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/${profiles[$i]}/data"' >> ~/.zshrc
+    
 done
