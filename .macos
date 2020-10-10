@@ -21,14 +21,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo -e "\n\n/*** Hello $(whoami)! Let's get you set up. ***/"
 
+# Oh My Zsh
+bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshsetup)
+
 # Git
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitsetup)
 
 # Homebrew
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrewsetup)
-
-# Oh My Zsh
-bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshsetup)
 
 # VSCode
 bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/.vscodesetup)
