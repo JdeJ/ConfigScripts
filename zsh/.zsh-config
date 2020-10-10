@@ -1,11 +1,10 @@
 
 # Zsh aliases
-alias zshconfig="nano ~/.zshrc"
+alias zshrc="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 
 # VScode aliases
-alias code="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
-alias nice="code --extensions-dir $HOME/dev/jdej/vscode-profiles/nice/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/nice/data"
+# alias jdej="cd $HOME/dev/jdej && code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
 
 # Git aliases
 alias gi='git init'
