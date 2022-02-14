@@ -38,8 +38,6 @@ code --force --install-extension redhat.vscode-yaml
 code --force --install-extension waderyan.gitblame
 code --force --install-extension techer.open-in-browser
 code --force --install-extension ms-vscode.vscode-typescript-tslint-plugin
-code --force --install-extension CoenraadS.bracket-pair-colorizer-2
-code --force --install-extension firefox-devtools.vscode-firefox-debug
 
 echo -e "\n> Setting basic user config options"
 curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/vscode/settings.json > "$HOME/Library/Application Support/Code/User/settings.json"
