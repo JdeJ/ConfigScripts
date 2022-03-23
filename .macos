@@ -390,9 +390,6 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 
 
 printf "TODO:\n\
-install: \n\
-  battery indicator (App Store) \n\
-\n\
 Restart Terminal\n\
 Run 'p10k configure'\n\
 copy git config from your backup/re-login \n\
