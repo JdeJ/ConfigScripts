@@ -60,24 +60,6 @@
     },
     "eslint.format.enable": true,
     "eslint.codeActionsOnSave.mode": "all",
-    // Bracket Pair Colorizer Settings
-    "bracket-pair-colorizer-2.showBracketsInGutter": true,
-    "bracket-pair-colorizer-2.showBracketsInRuler": true,
-    "bracket-pair-colorizer-2.colors": [
-        "Gold",
-        "Orchid",
-        "LightSkyBlue"
-    ],
-    "bracket-pair-colorizer-2.activeScopeCSS": [
-        "borderStyle : solid",
-        "borderWidth : 1px",
-        "borderColor : {color}",
-        "opacity: 0.5"
-    ],
-    "bracket-pair-colorizer-2.colorMode": "Consecutive",
-    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
-    "bracket-pair-colorizer-2.forceIterationColorCycle": false,
-    "bracket-pair-colorizer-2.scopeLineRelativePosition": true,
     // javascript
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
     "javascript.preferences.quoteStyle": "single",
