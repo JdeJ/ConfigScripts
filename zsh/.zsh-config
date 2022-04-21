@@ -1,11 +1,11 @@
 
 # Zsh aliases
-alias zshconfig="nano ~/.zshrc"
+alias zshrc="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 
 # VScode aliases
-alias code="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
-alias nice="code --extensions-dir $HOME/dev/jdej/vscode-profiles/nice/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/nice/data"
+alias jdej="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
+alias npaw="code --extensions-dir $HOME/dev/jdej/vscode-profiles/npaw/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/npaw/data"
 
 # Git aliases
 alias gi='git init'
@@ -13,6 +13,7 @@ alias gcl='git clone'
 alias gc='git fetch --all && git checkout'
 alias gs='git fetch --all && git status'
 alias gcb='git checkout -b'
+alias gc-='git checkout -'
 alias gf='git fetch --all'
 alias ga='git add -A'
 alias ga.='git add .'
@@ -21,23 +22,40 @@ alias gca='git commit --amend --no-edit'
 alias gp='git push'
 alias gpo='git push origin'
 alias gpu='git push -u origin'
-alias gpl='git pull'
-alias gplo='git pull origin'
+alias gpl='git fetch --all && git pull --no-rebase origin'
+alias gr='git reset'
 alias grs='git reset --soft HEAD'
 alias grh='git reset --hard HEAD'
+alias gst='git stash'
+alias gsm='git stash save'
+alias gsl='git stash list'
+alias gsa='git stash apply'
+alias gsp='git stash pop'
+alias gsc='git stash clear'
 alias gl='git log'
 alias gd='git diff'
 alias gb='git branch -a'
 alias gbr='git branch -m'
 alias gra='git remote add'
 alias grd='git remote rm'
+alias gm='git fetch --all && git merge origin'
 
-# leverage an alias from the ~/.gitconfig
+# leverage an aliases from the ~/.gitconfig
 alias gh='git hist'
 alias glg='git lg'
 alias glg1='git lg1'
 alias glg2='git lg2'
 alias glg3='git lg3'
+
+# yarn aliases
+alias ys='yarn && yarn start'
+alias ysq='yarn && yarn start:qa'
+alias yss='yarn && yarn start:stage'
+alias ysp='yarn && yarn start:preprod'
+
+# deploy aliases
+alias ssd='ssh npawdev@ci2-nl3.youbora.com'
+alias deploy='bash deploy.sh deploy -e jorge -b '
 
 # Other aliases
 alias cl='clear'

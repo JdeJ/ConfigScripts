@@ -19,9 +19,7 @@ brew install git hub watchman tree bat
 
 echo -e "\n> Installing apps with brew cask"
 brew cask install --force alfred android-studio chromedriver dash discord dropbox \
-firefox firefox-developer-edition gitkraken google-drive-file-stream \
-google-chrome google-chrome-dev handbrake iterm2 itsycal \
-marshallofsound-google-play-music-player mounty node notion nvm obs phpstorm postman \
-qlcolorcode qlmarkdown qlstephen qlvideo qmoji quicklook-json rectangle \
-slack spotify sublime-text suspicious-package skype teamviewer the-unarchiver transmission \
-virtualbox vlc whatsapp webpquicklook webstorm wifi-password workflowy yarn zoomus
+firefox firefox-developer-edition google-chrome google-chrome-dev handbrake iterm2 itsycal \
+mounty node notion nvm obs phpstorm postman rectangle slack sourcetree spotify sublime-text \
+suspicious-package skype teamviewer the-unarchiver transmission virtualbox vlc whatsapp \
+webstorm wifi-password workflowy yarn zoomus

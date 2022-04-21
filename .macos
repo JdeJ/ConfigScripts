@@ -74,20 +74,6 @@ defaults write com.apple.CrashReporter DialogType -string "none"
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
@@ -282,28 +268,6 @@ defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ###############################################################################
 # Safari & WebKit                                                             #
