@@ -18,7 +18,7 @@ echo -e "\n> Installing brew stuff"
 brew install git hub watchman tree bat
 
 echo -e "\n> Installing apps with brew cask"
-brew install --force alfred android-studio chromedriver dash discord dropbox \
+brew install --force alfred chromedriver dash discord dropbox \
 firefox gitkraken google-drive-file-stream \
 google-chrome handbrake iterm2 itsycal \
 mounty node notion nvm obs phpstorm postman rectangle \
