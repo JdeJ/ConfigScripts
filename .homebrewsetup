@@ -4,10 +4,21 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/.homebrewsetup)
 
+
+echo -e "\n\n==> Install Command Line Tools for Xcode"
+
+sudo xcode-select --install
+
 echo -e "\n\n==> Setting homebrew"
 
 echo -e "\n> Installing homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+echo -e "\n> Setting up PATH"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jdej/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo -e "\n> Check homebrew"
 brew doctor
 
 echo -e "\n> Installing brew stuff"
@@ -22,5 +33,5 @@ brew install --cask alfred android-studio chromedriver dash discord dropbox \
 firefox gitkraken google-drive-file-stream \
 google-chrome handbrake iterm2 itsycal \
 mounty node notion nvm obs phpstorm postman rectangle \
-slack spotify sublime-text suspicious-package skype teamviewer the-unarchiver transmission \
+slack spotify sublime-text skype teamviewer the-unarchiver transmission \
 virtualbox vlc whatsapp webstorm wifi-password yarn zoomus
