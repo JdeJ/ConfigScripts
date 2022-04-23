@@ -30,7 +30,7 @@ brew install git hub watchman tree bat
 
 echo -e "\n> Installing apps with brew cask"
 brew install --cask alfred android-studio chromedriver dash discord dropbox \
-firefox gitkraken google-drive-file-stream \
+firefox gitkraken google-drive-file-stream git \
 google-chrome handbrake iterm2 itsycal \
 mounty node notion nvm obs phpstorm postman rectangle \
 slack spotify sublime-text skype teamviewer the-unarchiver transmission \
