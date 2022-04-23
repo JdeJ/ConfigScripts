@@ -4,6 +4,9 @@
 # Run without downloading:
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshsetup)
 
+echo -e "\n\n==> Installing zsh"
+brew install zsh
+
 echo -e "\n\n==> Setting Oh My Zsh"
 
 echo -e "\n> Installing Oh My Zsh"
