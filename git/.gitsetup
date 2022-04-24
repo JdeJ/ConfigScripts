@@ -5,6 +5,7 @@
 # bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitsetup)
 
 echo -e "\n\n==> Setting Git"
+brew install git
 
 echo -e "\n> Creating global .gitconfig"
 curl https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/.gitconfig-global --output "$HOME/.gitconfig" --silent
