@@ -8,17 +8,19 @@ mkdir -p ~/.ssh
 touch ~/.ssh/config
 
 echo -e "\n\n==> Generating RSA tokens\n"
-read -p 'User(s) email separed by space: ' -a users
-read -p 'rsa(s) file name separed by space: ' -a rsas
+read -p 'User(s) email separed by space: ' -a mails
 read -sp 'Common passphrase for rsa(s): ' pass
 
-for (( i=0; i<=$(( ${#users[*]} -1 )); i++ ))
+echo -e "Host *\n UseKeychain yes\n AddKeysToAgent yes" >  ~/.ssh/config
+
+for (( i=0; i<=$(( ${#mails[*]} -1 )); i++ ))
 do 
-    echo -e "> Generating an RSA token for ${rsas[$i]}"
-    ssh-keygen -t rsa -b 4096 -C ${users[$i]} -P $pass -f ~/.ssh/${rsas[$i]}_rsa
+    echo -e "> Generating an RSA token for ${mails[$i]}"
+    ssh-keygen -t rsa -b 4096 -C ${mails[$i]} -P $pass -f ~/.ssh/${mails[$i]}_rsa
 
     eval "$(ssh-agent -s)"
-    #echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" >  ~/.ssh/config
-    SSH_ASKPASS=$pass ssh-add --apple-use-keychain ~/.ssh/${rsas[$i]}_rsa
+    
+    echo -e "\n IdentityFile ~/.ssh/${mails[$i]}_rsa" >>  ~/.ssh/config
+    SSH_ASKPASS=$pass ssh-add --apple-use-keychain ~/.ssh/${mails[$i]}_rsa
     echo "run 'pbcopy < ~/.ssh/${rsas[$i]}_rsa.pub' and paste that into GitHub"
 done
