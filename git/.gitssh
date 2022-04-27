@@ -18,7 +18,7 @@ do
     ssh-keygen -t rsa -b 4096 -C ${users[$i]} -P $pass -f ~/.ssh/${rsas[$i]}_rsa
 
     eval "$(ssh-agent -s)"
-    echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" >  ~/.ssh/config
-    SSH_ASKPASS=$pass ssh-add -K ~/.ssh/${rsas[$i]}_rsa
+    #echo -e "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/${rsas[$i]}_rsa" >  ~/.ssh/config
+    SSH_ASKPASS=$pass ssh-add --apple-use-keychain ~/.ssh/${rsas[$i]}_rsa
     echo "run 'pbcopy < ~/.ssh/${rsas[$i]}_rsa.pub' and paste that into GitHub"
 done
