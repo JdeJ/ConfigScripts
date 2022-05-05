@@ -5,6 +5,9 @@
 # below searches for JIRA issue key's. The issue key will
 # be extracted out of your branch name
 
+# Run without downloading:
+# bash <(curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/git/jira-prepare-commit-msg)
+
 REGEX_ISSUE_ID="[a-zA-Z0-9,\.\_\-]+-[0-9]+"
 
 # Find current branch name
