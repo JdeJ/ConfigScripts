@@ -54,13 +54,13 @@ alias yss='yarn && yarn start:stage'
 alias ysp='yarn && yarn start:preprod'
 
 # deploy aliases
-alias ssd='ssh npawdev@ci2-nl3.youbora.com'
-alias deploy='bash deploy.sh deploy -e jorge -b '
+#alias ssd='ssh npawdev@ci2-nl3.youbora.com'
+#alias deploy='bash deploy.sh deploy -e jorge -b '
 
 # update branches
-alias yul='gc hotfix && git pull && gc qa && git pull && gc develop && git pull'
-alias yub='gc hotfix && git pull && git pull origin master && gp && gc preprod && git pull origin hotfix && git pull && gp && gc qa && git pull && git pull origin hotfix && gp && gc develop 
-&& git pull && git pull origin qa && gp'
+#alias yul='gc hotfix && git pull && gc qa && git pull && gc develop && git pull'
+#alias yub='gc hotfix && git pull && git pull origin master && gp && gc preprod && git pull origin hotfix && git pull && gp && gc qa && git pull && git pull origin hotfix && gp && gc develop 
+#&& git pull && git pull origin qa && gp'
 
 # Other aliases
 alias cl='clear'
