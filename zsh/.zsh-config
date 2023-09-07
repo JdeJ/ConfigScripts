@@ -1,11 +1,10 @@
-
 # Zsh aliases
 alias zshrc="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 
 # VScode aliases
-alias jdej="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
-alias npaw="code --extensions-dir $HOME/dev/jdej/vscode-profiles/npaw/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/npaw/data"
+#alias jdej="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
+#alias npaw="code --extensions-dir $HOME/dev/jdej/vscode-profiles/npaw/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/npaw/data"
 
 # Git aliases
 alias gi='git init'
@@ -27,10 +26,10 @@ alias gr='git reset'
 alias grs='git reset --soft HEAD'
 alias grh='git reset --hard HEAD'
 alias gst='git stash'
-alias gsm='git stash save'
+alias gsm='git stash push -m'
 alias gsl='git stash list'
-alias gsa='git stash apply'
-alias gsp='git stash pop'
+alias gsa='git stash apply stash@{n}'
+alias gsp='git stash pop stash@'
 alias gsc='git stash clear'
 alias gl='git log'
 alias gd='git diff'
@@ -38,6 +37,7 @@ alias gb='git branch -a'
 alias gbr='git branch -m'
 alias gra='git remote add'
 alias grd='git remote rm'
+alias gbl='git branch --sort=-committerdate  # DESC'
 alias gm='git fetch --all && git merge origin'
 
 # leverage an aliases from the ~/.gitconfig
@@ -57,6 +57,11 @@ alias ysp='yarn && yarn start:preprod'
 alias ssd='ssh npawdev@ci2-nl3.youbora.com'
 alias deploy='bash deploy.sh deploy -e jorge -b '
 
+# update branches
+alias yul='gc hotfix && git pull && gc qa && git pull && gc develop && git pull'
+alias yub='gc hotfix && git pull && git pull origin master && gp && gc preprod && git pull origin hotfix && git pull && gp && gc qa && git pull && git pull origin hotfix && gp && gc develop 
+&& git pull && git pull origin qa && gp'
+
 # Other aliases
 alias cl='clear'
 
@@ -69,3 +74,6 @@ cdf() {
         echo 'No Finder window found' >&2
     fi
 }
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
