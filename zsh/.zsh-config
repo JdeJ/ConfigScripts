@@ -1,3 +1,4 @@
+
 # Zsh aliases
 alias zshrc="nano ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
@@ -16,7 +17,7 @@ alias gc-='git checkout -'
 alias gf='git fetch --all'
 alias ga='git add -A'
 alias ga.='git add .'
-alias gcm='git commit -m'
+alias gcm='git add -A && git commit -m'
 alias gca='git commit --amend --no-edit'
 alias gp='git push'
 alias gpo='git push origin'
@@ -47,15 +48,19 @@ alias glg1='git lg1'
 alias glg2='git lg2'
 alias glg3='git lg3'
 
-# yarn aliases
-alias ys='yarn && yarn start'
-alias ysq='yarn && yarn start:qa'
-alias yss='yarn && yarn start:stage'
-alias ysp='yarn && yarn start:preprod'
+# pnpm aliases
+alias pnpms='pnpm start'
+alias pnpmt='pnpm run test'
+alias pnpmc='pnpm run test:coverage'
+alias pnpmf='pnpm flow'
 
-# deploy aliases
-#alias ssd='ssh npawdev@ci2-nl3.youbora.com'
-#alias deploy='bash deploy.sh deploy -e jorge -b '
+# deploy aliasesssh npawdev@ci2-nl3.youbora.com'
+JID=JdeJ
+JTO=11c48b57add78041fbb367b18e1fb18e4e
+alias de4001='cd ~/DEV/groot && gpl && JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p ui40 -d webos -e dev01 -b'
+alias de4002='cd ~/DEV/groot && gpl && JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p ui40 -d webos -e dev02 -b'
+alias de4003='cd ~/DEV/groot && gpl && JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p ui40 -d webos -e dev03 -b'
+alias de4004='cd ~/DEV/groot && gpl && JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p ui40 -d webos -e dev04 -b'
 
 # update branches
 #alias yul='gc hotfix && git pull && gc qa && git pull && gc develop && git pull'
