@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -207,13 +207,15 @@ load-nvmrc
 #ssh npawdev@ci2-nl3.youbora.com'
 
 ### Rakuten aliases
-# pnpm aliases
-alias pnpms='pnpm start'
-alias pnpmt='pnpm run test'
-alias pnpmc='pnpm run test:coverage'
-alias pnpmf='pnpm flow'
+# run command in a specific workflow
+run() {
+  local command=$1
+  local workflow=${2:-ui-40}
 
-# deploy aliases
+  pnpm -F "$workflow" run "$command"
+}
+
+# deploy specific workflow
 JID=JdeJ
 JTO=11c48b57add78041fbb367b18e1fb18e4e
 deploy() {
