@@ -212,6 +212,10 @@ run() {
   local command=$1
   local workflow=${2:-ui-40}
 
+  if [ "$command" = "coverage" ]; then
+    command="test:coverage"
+  fi
+
   pnpm -F "$workflow" run "$command"
 }
 
