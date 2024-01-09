@@ -155,7 +155,7 @@ alias gbl='git branch --sort=-committerdate  # DESC'
 alias gm='git fetch --all && git merge origin'
 
 # leverage an aliases from the ~/.gitconfig
-alias gh='git hist'
+alias ghi='git hist'
 alias glg='git lg'
 alias glg1='git lg1'
 alias glg2='git lg2'
