@@ -83,3 +83,7 @@ Install VSCode and add basic extensions:
 - [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame): See git blame information in the status bar.
 - [open in browser](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser): This allows you to open the current file in your default browser or application.
 - [TSLint](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin): TSLint support for Visual Studio Code.
+
+## Resources
+[macOS Setup](https://sourabhbajaj.com/mac-setup/)
+[driesvints dotfiles](https://github.com/driesvints/dotfiles)
