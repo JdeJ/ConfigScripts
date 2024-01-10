@@ -14,7 +14,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 echo -e "\n> Installing powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 echo -e "\n> Configuring powerlevel10k"
 curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.p10k.zsh > ~/.p10k.zsh
