@@ -108,7 +108,8 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -122,54 +123,38 @@ alias ohmyzsh="nano ~/.oh-my-zsh"
 #alias npaw="code --extensions-dir $HOME/dev/jdej/vscode-profiles/npaw/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/npaw/data"
 
 # Git aliases
-alias gi='git init'
-alias gcl='git clone'
-alias gc='git fetch --all && git checkout'
-alias gs='git fetch --all && git status'
-alias gcb='git checkout -b'
-alias gc-='git checkout -'
-alias gf='git fetch --all'
 alias ga='git add -A'
-alias gcm='git add -A && git commit -m'
+alias gb='git branch -a'
+alias gbl='git branch --sort=-committerdate  # DESC'
+alias gbr='git branch -m'
+alias gc-='git checkout -'
+alias gc='git fetch --all && git checkout'
 alias gca='git commit --amend --no-edit'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gcm='git add -A && git commit -m'
+alias gd='git diff'
+alias gf='git fetch --all'
+alias gh='git hist'
+alias gi='git init'
+alias gl='git log --oneline'
+alias gm='git fetch --all && git merge origin'
 alias gp='git push'
+alias gpl='git fetch --all && git pull --no-rebase origin'
 alias gpo='git push origin'
 alias gpu='git push -u origin'
-alias gpl='git fetch --all && git pull --no-rebase origin'
 alias gr='git reset'
-alias grs='git reset --soft HEAD'
-alias grh='git reset --hard HEAD'
-alias gst='git stash'
-alias gsm='git stash push -m'
-alias gsl='git stash list'
-alias gsa='git stash apply stash@{n}'
-alias gsp='git stash pop stash@'
-alias gsc='git stash clear'
-alias gl='git log --oneline'
-alias gd='git diff'
-alias gb='git branch -a'
-alias gbr='git branch -m'
 alias gra='git remote add'
 alias grd='git remote rm'
-alias gbl='git branch --sort=-committerdate  # DESC'
-alias gm='git fetch --all && git merge origin'
-
-# leverage an aliases from the ~/.gitconfig
-alias ghi='git hist'
-alias glg='git lg'
-alias glg1='git lg1'
-alias glg2='git lg2'
-alias glg3='git lg3'
-
-# Change directory to the current Finder directory
-cdf() {
-    target=`osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)'`
-    if [ "$target" != "" ]; then
-        cd "$target"; pwd
-    else
-        echo 'No Finder window found' >&2
-    fi
-}
+alias grh='git reset --hard HEAD'
+alias grs='git reset --soft HEAD'
+alias gs='git fetch --all && git status'
+alias gsa='git stash apply stash@{n}'
+alias gsc='git stash clear'
+alias gsl='git stash list'
+alias gsm='git stash push -m'
+alias gsp='git stash pop stash@'
+alias gst='git stash'
 
 # NVM
 source $(brew --prefix nvm)/nvm.sh
