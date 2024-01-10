@@ -17,7 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 
 echo -e "\n> Configuring powerlevel10k"
-curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.p10k.zsh >>! ~/.p10k.zsh
+curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.p10k.zsh > ~/.p10k.zsh
 
 echo -e "\n> Customizing Oh My Zsh"
-curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshrc >> ~/.zshrc
+curl -s https://raw.githubusercontent.com/JdeJ/dotfiles/master/zsh/.zshrc > ~/.zshrc
