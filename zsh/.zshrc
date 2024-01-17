@@ -209,7 +209,7 @@ deploy() {
   local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) 
   local platform="ui40"
   local device="webos"
-  local environment=""
+  local environment="dev04"
 
   while getopts "p:d:e:" opt; do
     case $opt in
@@ -219,7 +219,7 @@ deploy() {
     esac
   done
 
-  cd ~/DEV/groot && \
+  cd ~/dev/rakuten/groot && \
   gpl && \
   JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p "$platform" -d "$device" -e "$environment" -b "$branch" --force && \
   cd $current_dir
