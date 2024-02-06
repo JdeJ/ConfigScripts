@@ -1,317 +1,3 @@
-  UW PICO 5.09                                                                                New Buffer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                    [ Read 226 lines ]
-^G Get Help                    ^O WriteOut                    ^R Read File                   ^Y Prev Pg                     ^K Cut Text                    ^C Cur Pos
-^X Exit                        ^J Justify                     ^W Where is                    ^V Next Pg                     ^U UnCut Text                  ^T To Spell
-  UW PICO 5.09                                                                                New Buffer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                    [ Read 226 lines ]
-^G Get Help                    ^O WriteOut                    ^R Read File                   ^Y Prev Pg                     ^K Cut Text                    ^C Cur Pos
-^X Exit                        ^J Justify                     ^W Where is                    ^V Next Pg                     ^U UnCut Text                  ^T To Spell
-adb connect 10.12.52.189Last login: Mon Feb  5 14:31:18 on ttys003
-
-    ~/dev/rakuten/kuato  loading 
-❯ adb connect 10.12.52.189
-zsh: command not found: adb
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app !1 
-❯ ~/Library/Android/sdk/platform-tools/adb connect 10.12.52.189
-* daemon not running; starting now at tcp:5037
-* daemon started successfully
-failed to authenticate to 10.12.52.189:5555
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app !1                                                                                          4s 
-❯ zshrc
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app ?1                                                                                       1m 5s 
-❯ cd ~
-
-    ~ 
-❯ pwd
-/Users/jorge.dejuana
-
-    ~ 
-❯ ~/dev/rakuten/kuato
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app ?1 
-❯ zshrc
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app ?1                                                                                       1m 4s 
-❯ source .zshrc
-source: no such file or directory: .zshrc
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app ?1 
-❯ source ~/.zshrc
-
-    ~/dev/rakuten/kuato    jorge/TV-1679-UI40-Apply-transitions-to-Google-TV-app ?1 
-❯ adb
-Android Debug Bridge version 1.0.41
-Version 34.0.5-10900879
-Installed as /Users/jorge.dejuana/Library/Android/sdk/platform-tools//adb
-Running on Darwin 23.2.0 (arm64)
-
-global options:
- -a                       listen on all network interfaces, not just localhost
- -d                       use USB device (error if multiple devices connected)
- -e                       use TCP/IP device (error if multiple TCP/IP devices available)
- -s SERIAL                use device with given serial (overrides $ANDROID_SERIAL)
- -t ID                    use device with given transport id
- -H                       name of adb server host [default=localhost]
- -P                       port of adb server [default=5037]
- -L SOCKET                listen on given socket for adb server [default=tcp:localhost:5037]
- --one-device SERIAL|USB  only allowed with 'start-server' or 'server nodaemon', server will only connect to one USB device, specified by a serial number or USB device address.
- --exit-on-write-error    exit if stdout is closed
-
-general commands:
- devices [-l]             list connected devices (-l for long output)
- help                     show this help message
- version                  show version num
-
-networking:
- connect HOST[:PORT]      connect to a device via TCP/IP [default port=5555]
- disconnect [HOST[:PORT]]
-     disconnect from given TCP/IP device [default port=5555], or all
- pair HOST[:PORT] [PAIRING CODE]
-     pair with a device for secure TCP/IP communication
- forward --list           list all forward socket connections
- forward [--no-rebind] LOCAL REMOTE
-     forward socket connection using:
-       tcp:<port> (<local> may be "tcp:0" to pick any open port)
-       localabstract:<unix domain socket name>
-       localreserved:<unix domain socket name>
-       localfilesystem:<unix domain socket name>
-       dev:<character device name>
-       jdwp:<process pid> (remote only)
-       vsock:<CID>:<port> (remote only)
-       acceptfd:<fd> (listen only)
- forward --remove LOCAL   remove specific forward socket connection
- forward --remove-all     remove all forward socket connections
- reverse --list           list all reverse socket connections from device
- reverse [--no-rebind] REMOTE LOCAL
-     reverse socket connection using:
-       tcp:<port> (<remote> may be "tcp:0" to pick any open port)
-       localabstract:<unix domain socket name>
-       localreserved:<unix domain socket name>
-       localfilesystem:<unix domain socket name>
- reverse --remove REMOTE  remove specific reverse socket connection
- reverse --remove-all     remove all reverse socket connections from device
- mdns check               check if mdns discovery is available
- mdns services            list all discovered services
-
-file transfer:
- push [--sync] [-z ALGORITHM] [-Z] LOCAL... REMOTE
-     copy local files/directories to device
-     --sync: only push files that are newer on the host than the device
-     -n: dry run: push files to device without storing to the filesystem
-     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
-     -Z: disable compression
- pull [-a] [-z ALGORITHM] [-Z] REMOTE... LOCAL
-     copy files/dirs from device
-     -a: preserve file timestamp and mode
-     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
-     -Z: disable compression
- sync [-l] [-z ALGORITHM] [-Z] [all|data|odm|oem|product|system|system_ext|vendor]
-     sync a local build from $ANDROID_PRODUCT_OUT to the device (default all)
-     -n: dry run: push files to device without storing to the filesystem
-     -l: list files that would be copied, but don't copy them
-     -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
-     -Z: disable compression
-
-shell:
- shell [-e ESCAPE] [-n] [-Tt] [-x] [COMMAND...]
-     run remote shell command (interactive shell if no command given)
-     -e: choose escape character, or "none"; default '~'
-     -n: don't read from stdin
-     -T: disable pty allocation
-     -t: allocate a pty if on a tty (-tt: force pty allocation)
-     -x: disable remote exit codes and stdout/stderr separation
- emu COMMAND              run emulator console command
-
-app installation (see also `adb shell cmd package help`):
- install [-lrtsdg] [--instant] PACKAGE
-     push a single package to the device and install it
- install-multiple [-lrtsdpg] [--instant] PACKAGE...
-     push multiple APKs to the device for a single package and install them
- install-multi-package [-lrtsdpg] [--instant] PACKAGE...
-     push one or more packages to the device and install them atomically
-     -r: replace existing application
-     -t: allow test packages
-     -d: allow version code downgrade (debuggable packages only)
-     -p: partial application install (install-multiple only)
-     -g: grant all runtime permissions
-     --abi ABI: override platform's default ABI
-     --instant: cause the app to be installed as an ephemeral install app
-     --no-streaming: always push APK to device and invoke Package Manager as separate steps
-     --streaming: force streaming APK directly into Package Manager
-     --fastdeploy: use fast deploy
-     --no-fastdeploy: prevent use of fast deploy
-     --force-agent: force update of deployment agent when using fast deploy
-     --date-check-agent: update deployment agent when local version is newer and using fast deploy
-     --version-check-agent: update deployment agent when local version has different version code and using fast deploy
-     --local-agent: locate agent files from local source build (instead of SDK location)
-     (See also `adb shell pm help` for more options.)
- uninstall [-k] PACKAGE
-     remove this app package from the device
-     '-k': keep the data and cache directories
-
-debugging:
- bugreport [PATH]
-     write bugreport to given PATH [default=bugreport.zip];
-     if PATH is a directory, the bug report is saved in that directory.
-     devices that don't support zipped bug reports output to stdout.
- jdwp                     list pids of processes hosting a JDWP transport
- logcat                   show device log (logcat --help for more)
-
-security:
- disable-verity           disable dm-verity checking on userdebug builds
-  UW PICO 5.09                                                                                New Buffer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                    [ Read 229 lines ]
-^G Get Help                    ^O WriteOut                    ^R Read File                   ^Y Prev Pg                     ^K Cut Text                    ^C Cur Pos
-^X Exit                        ^J Justify                     ^W Where is                    ^V Next Pg                     ^U UnCut Text                  ^T To Spell
-  UW PICO 5.09                                                                     File: /Users/jorge.dejuana/.zshrc
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -359,6 +45,185 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-^G Get Help                    ^O WriteOut                    ^R Read File                   ^Y Prev Pg                     ^K Cut Text                    ^C Cur Pos
-^X Exit                        ^J Justify                     ^W Where is                    ^V Next Pg                     ^U UnCut Text                  ^T To Spell
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Zsh aliases
+alias zshrc="nano ~/.zshrc"
+alias ohmyzsh="nano ~/.oh-my-zsh"
+
+# VScode aliases
+#alias jdej="code --extensions-dir $HOME/dev/jdej/vscode-profiles/jdej/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/jdej/data"
+#alias npaw="code --extensions-dir $HOME/dev/jdej/vscode-profiles/npaw/exts --user-data-dir $HOME/dev/jdej/vscode-profiles/npaw/data"
+
+# Git aliases
+alias ga='git add -A'
+alias gb='git branch -a'
+alias gbl='git branch --sort=-committerdate  # DESC'
+alias gbr='git branch -m'
+alias gc-='git checkout -'
+alias gc='git fetch --all && git checkout'
+alias gca='git commit --amend --no-edit'
+alias gcb='git checkout -b'
+alias gcl='git clone'
+alias gcm='git add -A && git commit -m'
+alias gd='git diff'
+alias gf='git fetch --all'
+alias gh='git hist'
+alias gi='git init'
+alias gl='git log --oneline'
+alias gm='git fetch --all && git merge origin'
+alias gp='git push'
+alias gpl='git fetch --all && git pull --no-rebase origin'
+alias gpo='git push origin'
+alias gpu='git push -u origin'
+alias gr='git reset'
+alias gra='git remote add'
+alias grd='git remote rm'
+alias grh='git reset --hard HEAD'
+alias grs='git reset --soft HEAD'
+alias gs='git fetch --all && git status'
+alias gsa='git stash apply stash@{n}'
+alias gsc='git stash clear'
+alias gsl='git stash list'
+alias gsm='git stash push -m'
+alias gsp='git stash pop stash@'
+alias gst='git stash'
+
+# NVM
+source $(brew --prefix nvm)/nvm.sh
+
+# Loads the proper Node version in each folder
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+### NPAW aliases
+#alias yul='gc hotfix && git pull && gc qa && git pull && gc develop && git pull'
+#alias yub='gc hotfix && git pull && git pull origin master && gp && gc preprod && git pull origin hotfix && git pull && gp && gc qa && git pull && git pull origin hotfix && gp && gc develop 
+#&& git pull && git pull origin qa && gp'
+#ssh npawdev@ci2-nl3.youbora.com'
+
+### Rakuten aliases
+# run command in a specific workflow
+run() {
+  local command=$1
+  local workflow=${2:-ui-40}
+
+  if [ "$command" = "coverage" ]; then
+    command="test:coverage"
+  fi
+
+  pnpm -F "$workflow" run "$command"
+}
+
+# deploy specific workflow
+JID=JdeJ
+JTO=11c48b57add78041fbb367b18e1fb18e4e
+deploy() {
+  local current_dir=$(pwd)
+  local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) 
+  local platform="ui40"
+  local device="webos"
+  local environment="dev04"
+
+  while getopts "p:d:e:" opt; do
+    case $opt in
+      p) platform="$OPTARG";;
+      d) device="$OPTARG";;
+      e) environment="$OPTARG";;
+    esac
+  done
+
+  cd ~/dev/rakuten/groot && \
+  gpl && \
+  JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p "$platform" -d "$device" -e "$environment" -b "$branch" --force && \
+  cd $current_dir
+}
