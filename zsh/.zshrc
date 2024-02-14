@@ -204,6 +204,9 @@ run() {
 }
 
 # deploy specific workflow
+# eg: deploy
+# eg: deploy -e stg
+# eg: deploy -e stg -a
 JID=JdeJ
 JTO=11c48b57add78041fbb367b18e1fb18e4e
 deploy() {
