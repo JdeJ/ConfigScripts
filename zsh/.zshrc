@@ -212,17 +212,23 @@ deploy() {
   local platform="ui40"
   local device="webos"
   local environment="dev04"
+  local all_devices=0
 
-  while getopts "p:d:e:" opt; do
+  while getopts "p:d:e:a" opt; do
     case $opt in
       p) platform="$OPTARG";;
       d) device="$OPTARG";;
       e) environment="$OPTARG";;
+      a) all_devices=1;;
     esac
   done
 
   cd ~/dev/rakuten/groot && \
   gpl && \
-  JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p "$platform" -d "$device" -e "$environment" -b "$branch" --force && \
+  if [ $all_devices -eq 1 ]; then
+    JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p "$platform" -a -e "$environment" -b "$branch" --force
+  else
+    JENKINS_USER_ID="$JID" JENKINS_TOKEN="$JTO" pnpm run deploy -- -p "$platform" -d "$device" -e "$environment" -b "$branch" --force
+  fi && \
   cd $current_dir
 }
