@@ -217,12 +217,13 @@ deploy() {
   local environment="dev04"
   local all_devices=0
 
-  while getopts "p:d:e:a" opt; do
+  while getopts "p:d:e:b:a" opt; do
     case $opt in
       p) platform="$OPTARG";;
       d) device="$OPTARG";;
       e) environment="$OPTARG";;
       a) all_devices=1;;
+      b) branch="$OPTARG";;
     esac
   done
 
