@@ -128,6 +128,7 @@ alias ohmyzsh="nano ~/.oh-my-zsh"
 # Git aliases
 alias ga='git add -A'
 alias gb='git branch -a'
+alias gbh='git reflog | egrep -io "moving from ([^[:space:]]+)" | awk '{ print $3 }' | awk '!visited[$0]++' | head -10'
 alias gbl='git branch --sort=-committerdate  # DESC'
 alias gbr='git branch -m'
 alias gc-='git checkout -'
